@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kampala Bloom - Premium handcrafted florist in Uganda. Specializing in bespoke luxury floral arrangements, tropical Ugandan blooms, weddings, corporate styling, and fast delivery in Kampala, Entebbe, & Jinja.">
+  <title>Kampala Bloom | Premium Handcrafted Florist in Uganda</title>
+  
+  <!-- Google Fonts: Cormorant Garamond (Serif) & Inter (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section with Glassmorphism -->
+  <header class="glass-header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">Kampala</span> Bloom
+      </a>
+      <nav class="nav-links">
+        <a href="#about">Our Story</a>
+        <a href="#specialties">Ugandan Blooms</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Get in Touch</a>
+      </nav>
+      <button class="btn-primary" id="open-custom-btn">Request Custom Bouquet</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="hero-subtitle">Bespoke Floral Artistry</span>
+          <h1 class="hero-title">Elevating Uganda's Rich Tropical Flora</h1>
+          <p class="hero-description">
+            Handcrafted luxury arrangements combining exotic Nile orchids, volcanic soil roses, and majestic African Tulip blossoms. Sourced directly from local sustainable growers in Mt. Elgon and Fort Portal, delivered directly to your space.
+          </p>
+          <div class="hero-actions">
+            <a href="#gallery" class="btn-primary">Explore Gallery</a>
+            <a href="#about" class="btn-secondary">Our Story</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="image-wrapper">
+            <!-- Main LCP Image: loaded with high fetch priority, no lazy loading -->
+            <img src="images/hero_florals.png" 
+                 alt="Kampala Bloom signature floral arrangement in a clay vase featuring African Tulip blossoms and orchids" 
+                 fetchpriority="high"
+                 class="hero-img"
+                 width="600" height="600">
+            <div class="hero-badge">
+              <span class="badge-title">Handcrafted in</span>
+              <span class="badge-subtitle">Kampala</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="section-container">
+        <div class="about-grid">
+          <div class="about-text-column">
+            <span class="section-label">Our Heritage</span>
+            <h2 class="section-title">Rooted in Ugandan Soil</h2>
+            <p class="about-para">
+              At Kampala Bloom, we believe that flowers are nature’s poetry. Uganda’s unique equatorial climate, rich volcanic earth, and high altitudes yield some of the most vibrant, resilient, and fragrant flowers in the world. 
+            </p>
+            <p class="about-para">
+              We partner directly with family-run farms in Fort Portal, Mt. Elgon, and Entebbe, ensuring our growers are paid fair wages while bringing you blossoms at the peak of their freshness. From corporate styling in Nakasero to intimate bridal bouquets in Muyenga, we craft statements of luxury and organic beauty.
+            </p>
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-desc">Sustainably Sourced</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">2hr</span>
+                <span class="stat-desc">Kampala Express Delivery</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">15+</span>
+                <span class="stat-desc">Ugandan Flower Varieties</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-features-column">
+            <div class="feature-card">
+              <div class="feature-icon">🌿</div>
+              <h3 class="feature-title">Ugandan Tropicals</h3>
+              <p class="feature-desc">Vibrant Bird of Paradise, fiery African Tulip petals, and deep green Monstera foliage unique to the Nile basin.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">✨</div>
+              <h3 class="feature-title">Artisan Designs</h3>
+              <p class="feature-desc">Every stem is selected and arranged by master local florists, merging international contemporary aesthetics with Ugandan warmth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="specialties" class="specialties-section scroll-reveal">
+      <div class="section-container text-center">
+        <span class="section-label">Our Specialties</span>
+        <h2 class="section-title">Crafted for Every Occasion</h2>
+        <p class="section-subtitle">Explore our signatures, designed using local blooms and imported luxury stems.</p>
+        
+        <div class="specialties-grid">
+          <div class="specialty-card">
+            <span class="card-icon">👑</span>
+            <h3>Royal Tropicals</h3>
+            <p>Featuring orange Bird of Paradise, red Anthuriums, and wild Entebbe ferns. Perfect for a bold, artistic statement.</p>
+          </div>
+          <div class="specialty-card">
+            <span class="card-icon">💍</span>
+            <h3>Bridal Petals</h3>
+            <p>Romantic white Nile Lilies and cream volcanic roses, curated with eucalyptus foliage for dream weddings in Uganda.</p>
+          </div>
+          <div class="specialty-card">
+            <span class="card-icon">🖤</span>
+            <h3>Chic Corporate</h3>
+            <p>Minimalist, architectural arrangements featuring polished Monstera leaves and ginger lily stalks for Nakasero boardrooms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section scroll-reveal">
+      <div class="section-container">
+        <div class="gallery-header">
+          <div>
+            <span class="section-label">Arrangement Gallery</span>
+            <h2 class="section-title">Handpicked Collections</h2>
+          </div>
+          <!-- Gallery Filter Buttons -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="tropical">Tropical</button>
+            <button class="filter-btn" data-filter="wedding">Weddings</button>
+            <button class="filter-btn" data-filter="romance">Romance</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+          </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+          
+          <!-- Card 1: Tropical -->
+          <div class="gallery-card" data-category="tropical">
+            <div class="card-img-wrapper">
+              <img src="images/gallery_tropical.png" 
+                   alt="Bird of Paradise and Anthurium floral arrangement" 
+                   loading="lazy" 
+                   class="gallery-img"
+                   width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Tropical</span>
+                <h3 class="card-title">Nile Sunset Bowl</h3>
+                <p class="card-price">UGX 180,000</p>
+                <button class="btn-card-view" data-title="Nile Sunset Bowl" data-desc="A striking modern arrangement designed inside a terracotta bowl, combining bright orange Bird of Paradise flowers, vibrant red Anthuriums, and broad, architectural Monstera leaves. Perfect for a central table or reception counter." data-img="images/gallery_tropical.png" data-price="UGX 180,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Wedding -->
+          <div class="gallery-card" data-category="wedding">
+            <div class="card-img-wrapper">
+              <img src="images/gallery_wedding.png" 
+                   alt="Bridal bouquet of white lilies and cream roses" 
+                   loading="lazy" 
+                   class="gallery-img"
+                   width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Weddings</span>
+                <h3 class="card-title">Victoria Bridal Bouquet</h3>
+                <p class="card-price">UGX 350,000</p>
+                <button class="btn-card-view" data-title="Victoria Bridal Bouquet" data-desc="An exquisite, hand-tied bridal bouquet showcasing pure white lilies, luxury cream roses, elegant white orchids, and local Ugandan ferns, bound together with an ivory silk ribbon." data-img="images/gallery_wedding.png" data-price="UGX 350,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Romance -->
+          <div class="gallery-card" data-category="romance">
+            <div class="card-img-wrapper">
+              <img src="images/gallery_romance.png" 
+                   alt="Romantic bouquet of vibrant red roses" 
+                   loading="lazy" 
+                   class="gallery-img"
+                   width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Romance</span>
+                <h3 class="card-title">Kampala Velvet Roses</h3>
+                <p class="card-price">UGX 220,000</p>
+                <button class="btn-card-view" data-title="Kampala Velvet Roses" data-desc="A timeless collection of deep red roses sourced from volcanic-soil farms, accented by delicate baby's breath and fresh green eucalyptus, styled inside a dark minimalist glass jar." data-img="images/gallery_romance.png" data-price="UGX 220,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Corporate -->
+          <div class="gallery-card" data-category="corporate">
+            <div class="card-img-wrapper">
+              <img src="images/gallery_corporate.png" 
+                   alt="Sleek corporate arrangement with Ginger Lilies and Monsteras" 
+                   loading="lazy" 
+                   class="gallery-img"
+                   width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Corporate</span>
+                <h3 class="card-title">Nakasero Monolith</h3>
+                <p class="card-price">UGX 280,000</p>
+                <button class="btn-card-view" data-title="Nakasero Monolith" data-desc="An architectural, tall installation designed for corporate reception lobbies and executive boardrooms, displaying tall ginger lily stalks, pristine white calla lilies, and structural Monstera leaves in a metallic cylinder." data-img="images/gallery_corporate.png" data-price="UGX 280,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Areas & Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="section-container">
+        <div class="contact-card-glass">
+          <div class="contact-info">
+            <span class="section-label">Visit & Order</span>
+            <h2 class="section-title">Let us Bloom your Space</h2>
+            <p>Our boutique workshop is located in Kampala, serving clients across Central Uganda. Stop by or reach out for custom orders, events, and monthly subscriptions.</p>
+            
+            <div class="contact-details">
+              <div class="detail-item">
+                <span class="detail-icon">📍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Plot 24, Yusuf Lule Road, Nakasero, Kampala</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">📞</span>
+                <div>
+                  <h4>Call / WhatsApp</h4>
+                  <p>+256 701 234 567</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🚚</span>
+                <div>
+                  <h4>Delivery Areas</h4>
+                  <p>Kampala (Kololo, Nakasero, Muyenga, Bugolobi, Luzira), Entebbe, & Jinja</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-wrapper">
+            <h3>Send a Message</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="c-name">Full Name</label>
+                <input type="text" id="c-name" name="name" required placeholder="Aria Namubiru">
+              </div>
+              <div class="form-group">
+                <label for="c-email">Email Address</label>
+                <input type="email" id="c-email" name="email" required placeholder="aria@domain.ug">
+              </div>
+              <div class="form-group">
+                <label for="c-msg">Your Request</label>
+                <textarea id="c-msg" name="message" rows="4" required placeholder="Tell us about your floral needs..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section with Custom Social Buttons -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-accent">Kampala</span> Bloom
+        </a>
+        <p class="footer-tagline">Exquisite Ugandan Florals. Crafted with passion, delivered with care.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="#about">Story</a>
+        <a href="#specialties">Flora</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <h4>Join our Bloom Family</h4>
+        <p>Follow our daily creations and floral journeys across Uganda.</p>
+        <div class="social-buttons">
+          <!-- Instagram -->
+          <a href="https://instagram.com" class="social-btn instagram" aria-label="Follow Kampala Bloom on Instagram" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/256701234567" class="social-btn whatsapp" aria-label="Chat with Kampala Bloom on WhatsApp" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://facebook.com" class="social-btn facebook" aria-label="Follow Kampala Bloom on Facebook" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <!-- Pinterest -->
+          <a href="https://pinterest.com" class="social-btn pinterest" aria-label="Follow Kampala Bloom on Pinterest" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kampala Bloom. All Rights Reserved. Sourced & Handcrafted in Uganda.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Gallery Modal Dialog -->
+  <dialog id="lightbox-dialog" class="glass-dialog">
+    <div class="dialog-body">
+      <button class="dialog-close-btn" id="close-lightbox-btn" aria-label="Close details dialog">&times;</button>
+      <div class="dialog-grid">
+        <div class="dialog-img-wrapper">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img-content">
+        </div>
+        <div class="dialog-info-wrapper">
+          <span class="dialog-tag" id="lightbox-tag">Tropical</span>
+          <h3 id="lightbox-title" class="dialog-title">Signature Arrangement</h3>
+          <p id="lightbox-desc" class="dialog-desc">Details of the arrangement will go here.</p>
+          <div class="dialog-footer">
+            <span class="dialog-price" id="lightbox-price">UGX 0.00</span>
+            <button class="btn-primary" id="dialog-order-btn">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Custom Request Popover Dialog (Top Layer Transition) -->
+  <dialog id="custom-request-dialog" class="glass-dialog">
+    <div class="dialog-body custom-request-body">
+      <button class="dialog-close-btn" id="close-custom-btn" aria-label="Close custom request dialog">&times;</button>
+      <h3>Request a Bespoke Arrangement</h3>
+      <p class="dialog-subtitle">Tell us what you're imagining, and our Kampala artisans will design it.</p>
+      
+      <form id="custom-request-form">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="cr-name">Your Name</label>
+            <input type="text" id="cr-name" required placeholder="Aria Namubiru">
+          </div>
+          <div class="form-group">
+            <label for="cr-phone">Phone / WhatsApp</label>
+            <input type="tel" id="cr-phone" required placeholder="+256 701 234 567">
+          </div>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="cr-occasion">Occasion</label>
+            <select id="cr-occasion">
+              <option value="wedding">Wedding / Bridal</option>
+              <option value="romance">Romance / Anniversary</option>
+              <option value="corporate">Corporate / Office Space</option>
+              <option value="custom">Other Special Custom Request</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cr-delivery">Delivery Area</label>
+            <select id="cr-delivery">
+              <option value="nakasero">Nakasero / Kololo / Bugolobi</option>
+              <option value="muyenga">Muyenga / Kabalagala</option>
+              <option value="other-kla">Other Kampala Areas</option>
+              <option value="entebbe">Entebbe</option>
+              <option value="jinja">Jinja</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cr-desc">Floral Preferences & Budget (UGX)</label>
+          <textarea id="cr-desc" rows="3" required placeholder="E.g., I'd love red volcanic roses with Bird of Paradise stems, budget around 200,000 UGX..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full">Submit Custom Inquiry</button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- JavaScript Interaction Script -->
+  <script src="app.js"></script>
+</body>
+</html>
