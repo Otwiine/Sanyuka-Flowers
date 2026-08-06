@@ -1,5 +1,5 @@
 /* ==========================================================================
-   KAMPALA BLOOM - DESIGN SYSTEM & STYLES
+   SANYUKA DECOR FLORISTS - DESIGN SYSTEM & STYLES
    ========================================================================== */
 
 /* Design Tokens & Variables */
@@ -27,7 +27,7 @@
   --transition-fast: all 0.2s ease;
 }
 
-/* Dark Mode Theme overrides (automatic or toggle-ready) */
+/* Dark Mode Theme overrides (automatic or toggle-ready) - Commented out to keep background white/cream
 @media (prefers-color-scheme: dark) {
   :root {
     --color-cream: #091310;
@@ -39,6 +39,7 @@
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
   }
 }
+*/
 
 /* Reset & Base Styles */
 * {
@@ -216,6 +217,21 @@ a {
   color: var(--color-terracotta);
   font-style: italic;
   font-weight: 400;
+}
+
+.logo-img {
+  height: 75px;
+  width: auto;
+  display: block;
+  transition: var(--transition-smooth);
+}
+
+.glass-header .logo-img {
+  filter: brightness(0) opacity(0.85);
+}
+
+.logo-img:hover {
+  transform: scale(1.02);
 }
 
 .nav-links {
@@ -685,6 +701,13 @@ a {
   justify-content: center;
 }
 
+.detail-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-terracotta);
+  display: block;
+}
+
 .detail-item h4 {
   font-family: var(--font-sans);
   font-size: 1.05rem;
@@ -873,12 +896,8 @@ a {
   background-color: #25d366;
 }
 
-.social-btn.facebook:hover {
-  background-color: #1877f2;
-}
-
-.social-btn.pinterest:hover {
-  background-color: #bd081c;
+.social-btn.tiktok:hover {
+  background-color: #010101;
 }
 
 .social-btn:hover .icon {

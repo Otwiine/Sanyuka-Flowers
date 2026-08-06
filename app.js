@@ -1,5 +1,5 @@
 /* ==========================================================================
-   KAMPALA BLOOM - INTERACTION LOGIC
+   SANYUKA DECOR FLORISTS - INTERACTION LOGIC
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
