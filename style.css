@@ -199,7 +199,7 @@ a {
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 8px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,10 +228,12 @@ a {
 
 .glass-header .logo-img {
   filter: brightness(0) opacity(0.85);
+  transform: scale(1.6);
+  transform-origin: left center;
 }
 
 .logo-img:hover {
-  transform: scale(1.02);
+  /* hover effect removed */
 }
 
 .nav-links {
