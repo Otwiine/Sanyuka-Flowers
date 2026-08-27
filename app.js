@@ -10,37 +10,65 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const galleryCards = document.querySelectorAll('.gallery-card');
 
+  function applyFilter(filterValue) {
+    galleryCards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+
+      if (filterValue === 'all' || cardCategory === filterValue) {
+        // Show card
+        card.style.display = 'block';
+        // Force a reflow to re-trigger scale-in if needed
+        requestAnimationFrame(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        });
+      } else {
+        // Hide instantly so only the active tab's cards are in the layout
+        card.style.display = 'none';
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.8)';
+      }
+    });
+  }
+
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       // Remove active class from other buttons
       filterButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
-      const filterValue = button.getAttribute('data-filter');
+      applyFilter(button.getAttribute('data-filter'));
+    });
+  });
 
-      galleryCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        
-        if (filterValue === 'all' || cardCategory === filterValue) {
-          // Show card
-          card.style.display = 'block';
-          // Force a reflow to re-trigger scale-in if needed
-          requestAnimationFrame(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          });
-        } else {
-          // Hide card with transition
-          card.style.opacity = '0';
-          card.style.transform = 'scale(0.8)';
-          // Wait for transition, then set display none
-          setTimeout(() => {
-            if (card.style.opacity === '0') {
-              card.style.display = 'none';
-            }
-          }, 300);
-        }
-      });
+  // Apply the active tab's filter on initial load
+  const activeButton = document.querySelector('.filter-btn.active');
+  if (activeButton) {
+    applyFilter(activeButton.getAttribute('data-filter'));
+  }
+
+  /* ------------------------------------------------------------------------
+     1b. SPECIALTY TILE LINKS -> GALLERY TABS
+     ------------------------------------------------------------------------ */
+  document.querySelectorAll('.specialty-card[data-filter]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const filter = card.getAttribute('data-filter');
+      const targetButton = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+
+      // Activate the matching gallery tab
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      if (targetButton) {
+        targetButton.classList.add('active');
+        applyFilter(filter);
+      }
+
+      // Smooth-scroll to the gallery section
+      const gallery = document.getElementById('gallery');
+      if (gallery) {
+        gallery.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 
@@ -104,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open Custom Request Dialog and prepopulate preferences
     const customDialog = document.getElementById('custom-request-dialog');
     const preferencesArea = document.getElementById('cr-desc');
-    preferencesArea.value = `I would like to order the arrangement: "${itemTitle}". Please let me know details.`;
+    preferencesArea.value = `I would like to order: "${itemTitle}".`;
     
     customDialog.showModal();
   });
@@ -118,7 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeCustomBtn = document.getElementById('close-custom-btn');
 
   openCustomBtn.addEventListener('click', () => {
-    customRequestDialog.showModal();
+    const gallerySection = document.getElementById('gallery');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 
   closeCustomBtn.addEventListener('click', () => {
@@ -142,22 +173,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   const customRequestForm = document.getElementById('custom-request-form');
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const nameInput = document.getElementById('c-name').value;
-    
-    // Simulate API request call
-    showToast(`Thank you, ${nameInput}! Your message has been sent successfully.`);
-    contactForm.reset();
-  });
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById('c-name').value;
+      
+      // Simulate API request call
+      showToast(`Thank you, ${nameInput}! Your message has been sent successfully.`);
+      contactForm.reset();
+    });
+  }
 
   customRequestForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const nameInput = document.getElementById('cr-name').value;
-    const deliveryArea = document.getElementById('cr-delivery').value;
-    
+    const nameInput = document.getElementById('cr-name').value.trim();
+    const fulfillment = document.querySelector('input[name="cr-fulfillment"]:checked').value;
+    const notes = document.getElementById('cr-desc').value.trim();
+
+    // Compose the order message and open WhatsApp with it pre-filled
+    const message = `New Order Request\n\nName: ${nameInput}\nFulfillment: ${fulfillment}\nNotes: ${notes}`;
+    const whatsappUrl = `https://wa.me/256714008799?text=${encodeURIComponent(message)}`;
+
     customRequestDialog.close();
-    showToast(`Inquiry received, ${nameInput}! Our team will WhatsApp you within 30 minutes regarding delivery in ${capitalize(deliveryArea)}.`);
+    window.open(whatsappUrl, '_blank');
+    showToast(`Order sent to WhatsApp, ${nameInput}! We'll confirm your ${fulfillment.toLowerCase()} shortly.`);
     customRequestForm.reset();
   });
 
@@ -180,12 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => toast.remove(), 300);
     }, 5000);
   }
-
-  // Capitalize Helper
-  function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
 
   /* ------------------------------------------------------------------------
      5. SCROLL ENTRY EFFECT FALLBACK (IntersectionObserver)
@@ -222,5 +255,26 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(el);
     });
   }
+
+  /* ------------------------------------------------------------------------
+     6. FLUSH SECTION SCROLL (align section tops with header bottom)
+     ------------------------------------------------------------------------ */
+  function syncScrollPadding() {
+    const docEl = document.documentElement;
+    const header = document.querySelector('.glass-header');
+    if (!header) return;
+    const headerRect = header.getBoundingClientRect();
+    // The scaled logo visually extends past the header bar; measure its bottom
+    const logo = header.querySelector('.logo-img');
+    let bottom = headerRect.height;
+    if (logo) {
+      bottom = Math.max(bottom, logo.getBoundingClientRect().bottom - headerRect.top);
+    }
+    docEl.style.scrollPaddingTop = bottom + 'px';
+  }
+
+  syncScrollPadding();
+  window.addEventListener('load', syncScrollPadding);
+  window.addEventListener('resize', syncScrollPadding);
 
 });

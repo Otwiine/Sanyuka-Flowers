@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sanyuka Decor Florists - Premium handcrafted florist in Uganda. Specializing in bespoke luxury floral arrangements, tropical Ugandan blooms, weddings, corporate styling, and fast delivery in Kampala, Entebbe, & Jinja.">
+  <meta name="description"
+    content="Sanyuka Decor Florists - Premium handcrafted florist in Uganda. Specializing in bespoke luxury floral arrangements, tropical Ugandan blooms, weddings, corporate styling, and fast delivery in Kampala, Entebbe, & Jinja.">
   <title>Sanyuka Decor Florists | Premium Handcrafted Florist in Uganda</title>
-  
+
+  <link rel="icon" type="image/png" href="Assets/images/sanyuka_logo.png">
+
   <!-- Google Fonts: Cormorant Garamond (Serif) & Inter (Sans-Serif) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons (local copy) -->
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Header Section with Glassmorphism -->
   <header class="glass-header">
     <div class="header-container">
       <a href="#" class="logo">
-        <img src="images/sanyuka_logo.png" alt="Sanyuka Decor Florists Logo" class="logo-img">
+        <img src="Assets/images/sanyuka_logo.png" alt="Sanyuka Decor Florists Logo" class="logo-img">
       </a>
       <nav class="nav-links">
         <a href="#about">Our Story</a>
-        <a href="#specialties">Ugandan Blooms</a>
+        <a href="#specialties">Specialties</a>
         <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQs</a>
         <a href="#contact">Get in Touch</a>
       </nav>
-      <button class="btn-primary" id="open-custom-btn">Request Custom Bouquet</button>
+      <button class="btn-primary" id="open-custom-btn">Order Flowers Now!</button>
     </div>
   </header>
 
@@ -37,10 +48,12 @@
     <section class="hero-section">
       <div class="hero-container">
         <div class="hero-content">
-          <span class="hero-subtitle">Bespoke Floral Artistry</span>
+          <span class="hero-subtitle">Your local flower haven</span>
           <h1 class="hero-title">Elevating Uganda's Rich Tropical Flora</h1>
           <p class="hero-description">
-            Handcrafted luxury arrangements combining exotic Nile orchids, volcanic soil roses, and majestic African Tulip blossoms. Sourced directly from local sustainable growers in Mt. Elgon and Fort Portal, delivered directly to your space.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
           </p>
           <div class="hero-actions">
             <a href="#gallery" class="btn-primary">Explore Gallery</a>
@@ -49,16 +62,8 @@
         </div>
         <div class="hero-visual">
           <div class="image-wrapper">
-            <!-- Main LCP Image: loaded with high fetch priority, no lazy loading -->
-            <img src="images/hero_florals.png" 
-                 alt="Sanyuka Decor Florists signature floral arrangement in a clay vase featuring African Tulip blossoms and orchids" 
-                 fetchpriority="high"
-                 class="hero-img"
-                 width="600" height="600">
-            <div class="hero-badge">
-              <span class="badge-title">Handcrafted by</span>
-              <span class="badge-subtitle">Sanyuka</span>
-            </div>
+            <img src="Assets/images/FLO1.jpeg" alt="Sanyuka Decor Florists signature floral arrangement"
+              fetchpriority="high" class="hero-img" width="600" height="600">
           </div>
         </div>
       </div>
@@ -68,41 +73,23 @@
     <section id="about" class="about-section scroll-reveal">
       <div class="section-container">
         <div class="about-grid">
+          <div class="about-image-column">
+            <img src="Assets/images/MAN1.jpg" alt="Sanyuka Decor Florists handcrafted arrangement"
+              class="about-img" loading="lazy">
+          </div>
           <div class="about-text-column">
-            <span class="section-label">Our Heritage</span>
+            <span class="section-label">Our Story</span>
             <h2 class="section-title">Rooted in Ugandan Soil</h2>
             <p class="about-para">
-              At Sanyuka Decor Florists, we believe that flowers are nature’s poetry. Uganda’s unique equatorial climate, rich volcanic earth, and high altitudes yield some of the most vibrant, resilient, and fragrant flowers in the world. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
             </p>
             <p class="about-para">
-              We partner directly with family-run farms in Fort Portal, Mt. Elgon, and Entebbe, ensuring our growers are paid fair wages while bringing you blossoms at the peak of their freshness. From corporate styling in Nakasero to intimate bridal bouquets in Muyenga, we craft statements of luxury and organic beauty.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
             </p>
-            <div class="stats-row">
-              <div class="stat-item">
-                <span class="stat-num">100%</span>
-                <span class="stat-desc">Sustainably Sourced</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-num">2hr</span>
-                <span class="stat-desc">Kampala Express Delivery</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-num">15+</span>
-                <span class="stat-desc">Ugandan Flower Varieties</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-features-column">
-            <div class="feature-card">
-              <div class="feature-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 12C6.5 12 8 3 17 2c0 0 1 8.5-5 12.5"/><path d="M6.5 12c0 0-2 6 0 8"/><path d="M12 14.5c-2 1.5-4.5 1.5-5.5 1.5"/></svg></div>
-              <h3 class="feature-title">Ugandan Tropicals</h3>
-              <p class="feature-desc">Vibrant Bird of Paradise, fiery African Tulip petals, and deep green Monstera foliage unique to the Nile basin.</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg></div>
-              <h3 class="feature-title">Artisan Designs</h3>
-              <p class="feature-desc">Every stem is selected and arranged by master local florists, merging international contemporary aesthetics with Ugandan warmth.</p>
-            </div>
           </div>
         </div>
       </div>
@@ -113,24 +100,33 @@
       <div class="section-container text-center">
         <span class="section-label">Our Specialties</span>
         <h2 class="section-title">Crafted for Every Occasion</h2>
-        <p class="section-subtitle">Explore our signatures, designed using local blooms and imported luxury stems.</p>
-        
+        <p class="section-subtitle">Handcrafted arrangements made with fresh, hand-selected flowers for every celebration.</p>
+
         <div class="specialties-grid">
-          <div class="specialty-card">
-            <span class="card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V9l4 3 4-6 4 6 4-3v11"/></svg></span>
-            <h3>Royal Tropicals</h3>
-            <p>Featuring orange Bird of Paradise, red Anthuriums, and wild Entebbe ferns. Perfect for a bold, artistic statement.</p>
-          </div>
-          <div class="specialty-card">
-            <span class="card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="6"/><path d="M9 2l3 4 3-4"/><path d="M9 6h6"/></svg></span>
-            <h3>Bridal Petals</h3>
-            <p>Romantic white Nile Lilies and cream volcanic roses, curated with eucalyptus foliage for dream weddings in Uganda.</p>
-          </div>
-          <div class="specialty-card">
-            <span class="card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></span>
-            <h3>Chic Corporate</h3>
-            <p>Minimalist, architectural arrangements featuring polished Monstera leaves and ginger lily stalks for Nakasero boardrooms.</p>
-          </div>
+          <a href="#gallery" class="specialty-card specialty-link" data-filter="wedding">
+            <span class="card-icon"><i class="fa-solid fa-ring"></i><i class="fa-solid fa-ring"></i></span>
+            <h3>Weddings</h3>
+            <p>Tailored bridal bouquets and venue decor crafted for your big day. Elegant arrangements designed to make
+              your wedding truly unforgettable.</p>
+          </a>
+          <a href="#gallery" class="specialty-card specialty-link" data-filter="corporate">
+            <span class="card-icon"><i class="fa-solid fa-briefcase"></i></span>
+            <h3>Corporate Gifts</h3>
+            <p>Sophisticated floral designs to elevate business relationships and events. The perfect way to send a
+              lasting, professional gesture.</p>
+          </a>
+          <a href="#gallery" class="specialty-card specialty-link" data-filter="special-occasions">
+            <span class="card-icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+            <h3>Special Occasions</h3>
+            <p>Vibrant arrangements for birthdays, anniversaries, and key holidays. Designed to help you celebrate every
+              meaningful moment.</p>
+          </a>
+          <a href="#gallery" class="specialty-card specialty-link" data-filter="sympathy-memorial">
+            <span class="card-icon"><i class="fa-solid fa-dove"></i></span>
+            <h3>Funeral Wreaths</h3>
+            <p>Timeless floral tributes crafted with dignity, grace, and compassion. Express your deepest sympathy and
+              honor loved ones.</p>
+          </a>
         </div>
       </div>
     </section>
@@ -145,85 +141,281 @@
           </div>
           <!-- Gallery Filter Buttons -->
           <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="tropical">Tropical</button>
-            <button class="filter-btn" data-filter="wedding">Weddings</button>
-            <button class="filter-btn" data-filter="romance">Romance</button>
+            <button class="filter-btn active" data-filter="wedding">Weddings</button>
             <button class="filter-btn" data-filter="corporate">Corporate</button>
+            <button class="filter-btn" data-filter="special-occasions">Special Occasions</button>
+            <button class="filter-btn" data-filter="sympathy-memorial">Sympathy &amp; Memorial</button>
           </div>
         </div>
 
         <!-- Gallery Grid -->
         <div class="gallery-grid" id="gallery-grid">
-          
-          <!-- Card 1: Tropical -->
-          <div class="gallery-card" data-category="tropical">
+
+          <!-- Card 1: Special Occasions -->
+          <div class="gallery-card" data-category="special-occasions">
             <div class="card-img-wrapper">
-              <img src="images/gallery_tropical.png" 
-                   alt="Bird of Paradise and Anthurium floral arrangement" 
-                   loading="lazy" 
-                   class="gallery-img"
-                   width="400" height="400">
+              <!-- Special Occasions: set src to your image path -->
+              <img src="" alt="Birthday bouquet of colorful seasonal blooms" loading="lazy" class="gallery-img"
+                width="400" height="400">
               <div class="card-overlay">
-                <span class="card-category">Tropical</span>
-                <h3 class="card-title">Nile Sunset Bowl</h3>
-                <p class="card-price">UGX 180,000</p>
-                <button class="btn-card-view" data-title="Nile Sunset Bowl" data-desc="A striking modern arrangement designed inside a terracotta bowl, combining bright orange Bird of Paradise flowers, vibrant red Anthuriums, and broad, architectural Monstera leaves. Perfect for a central table or reception counter." data-img="images/gallery_tropical.png" data-price="UGX 180,000">View Details</button>
+                <span class="card-category">Special Occasions</span>
+                <h3 class="card-title">Birthday</h3>
+                <p class="card-price">UGX 150,000</p>
+                <button class="btn-card-view" data-title="Birthday"
+                  data-desc="A cheerful hand-wrapped bunch of vibrant seasonal blooms, from sunny yellow sunflowers to pink carnations and green hydrangea. The perfect pick-me-up for birthdays and casual celebrations."
+                  data-img="" data-price="UGX 150,000">View Details</button>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: Wedding -->
+          <!-- Card 2: Special Occasions -->
+          <div class="gallery-card" data-category="special-occasions">
+            <div class="card-img-wrapper">
+              <!-- Special Occasions: set src to your image path -->
+              <img src="" alt="Anniversary arrangement with roses and lilies" loading="lazy" class="gallery-img"
+                width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Special Occasions</span>
+                <h3 class="card-title">Anniversary</h3>
+                <p class="card-price">UGX 200,000</p>
+                <button class="btn-card-view" data-title="Anniversary"
+                  data-desc="A romantic glass-vase arrangement blending blush garden roses, fragrant white lilies, and trailing eucalyptus. Ideal for anniversaries, milestones, and key holiday gatherings."
+                  data-img="" data-price="UGX 200,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Special Occasions -->
+          <div class="gallery-card" data-category="special-occasions">
+            <div class="card-img-wrapper">
+              <!-- Special Occasions: set src to your image path -->
+              <img src="" alt="Graduation arrangement with Bird of Paradise and Anthuriums" loading="lazy"
+                class="gallery-img" width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Special Occasions</span>
+                <h3 class="card-title">Graduation</h3>
+                <p class="card-price">UGX 180,000</p>
+                <button class="btn-card-view" data-title="Graduation"
+                  data-desc="A striking modern arrangement inside a terracotta bowl, combining bright orange Bird of Paradise flowers, vibrant red Anthuriums, and broad, architectural Monstera leaves. A bold centerpiece to celebrate a proud graduation milestone."
+                  data-img="" data-price="UGX 180,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Wedding -->
           <div class="gallery-card" data-category="wedding">
             <div class="card-img-wrapper">
-              <img src="images/gallery_wedding.png" 
-                   alt="Bridal bouquet of white lilies and cream roses" 
-                   loading="lazy" 
-                   class="gallery-img"
-                   width="400" height="400">
+              <!-- Wedding: set src to your image path -->
+              <img src="Assets/images/FLO2.jpg" alt="Bridal bouquet of white lilies and cream roses" loading="lazy" class="gallery-img"
+                width="400" height="400">
               <div class="card-overlay">
                 <span class="card-category">Weddings</span>
-                <h3 class="card-title">Victoria Bridal Bouquet</h3>
+                <h3 class="card-title">Bridal Bouquet</h3>
                 <p class="card-price">UGX 350,000</p>
-                <button class="btn-card-view" data-title="Victoria Bridal Bouquet" data-desc="An exquisite, hand-tied bridal bouquet showcasing pure white lilies, luxury cream roses, elegant white orchids, and local Ugandan ferns, bound together with an ivory silk ribbon." data-img="images/gallery_wedding.png" data-price="UGX 350,000">View Details</button>
+                <button class="btn-card-view" data-title="Bridal Bouquet"
+                  data-desc="An exquisite, hand-tied bridal bouquet showcasing pure white lilies, luxury cream roses, elegant white orchids, and local Ugandan ferns, bound together with an ivory silk ribbon."
+                  data-img="Assets/images/FLO2.jpg" data-price="UGX 350,000">View Details</button>
               </div>
             </div>
           </div>
 
-          <!-- Card 3: Romance -->
-          <div class="gallery-card" data-category="romance">
+          <!-- Card 5: Wedding -->
+          <div class="gallery-card" data-category="wedding">
             <div class="card-img-wrapper">
-              <img src="images/gallery_romance.png" 
-                   alt="Romantic bouquet of vibrant red roses" 
-                   loading="lazy" 
-                   class="gallery-img"
-                   width="400" height="400">
+              <!-- Wedding: set src to your image path -->
+              <img src="Assets/images/PINKandPURP.jpg" alt="Cascading reception centerpiece with white orchids" loading="lazy" class="gallery-img"
+                width="400" height="400">
               <div class="card-overlay">
-                <span class="card-category">Romance</span>
-                <h3 class="card-title">Sanyuka Velvet Roses</h3>
-                <p class="card-price">UGX 220,000</p>
-                <button class="btn-card-view" data-title="Sanyuka Velvet Roses" data-desc="A timeless collection of deep red roses sourced from volcanic-soil farms, accented by delicate baby's breath and fresh green eucalyptus, styled inside a dark minimalist glass jar." data-img="images/gallery_romance.png" data-price="UGX 220,000">View Details</button>
+                <span class="card-category">Weddings</span>
+                <h3 class="card-title">Reception Centerpiece</h3>
+                <p class="card-price">UGX 420,000</p>
+                <button class="btn-card-view" data-title="Reception Centerpiece"
+                  data-desc="A long, cascading table runner built from white phalaenopsis orchids, soft ruscus greenery, and delicate Italian ruscus, designed to line the length of a reception table with understated luxury."
+                  data-img="Assets/images/PINKandPURP.jpg" data-price="UGX 420,000">View Details</button>
               </div>
             </div>
           </div>
 
-          <!-- Card 4: Corporate -->
+          <!-- Card 6: Wedding -->
+          <div class="gallery-card" data-category="wedding">
+            <div class="card-img-wrapper">
+              <!-- Wedding: set src to your image path -->
+              <img src="Assets/images/hero.jpeg" alt="Ceremony aisle arrangement with tropical blooms" loading="lazy" class="gallery-img"
+                width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Weddings</span>
+                <h3 class="card-title">Aisle Arrangement</h3>
+                <p class="card-price">UGX 300,000</p>
+                <button class="btn-card-view" data-title="Aisle Arrangement"
+                  data-desc="A dramatic pair of ceremony pedestal arrangements mixing white gladioli, tropical birds of paradise, and lush monstera leaves to frame the aisle and altar beautifully."
+                  data-img="Assets/images/hero.jpeg" data-price="UGX 300,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Corporate -->
           <div class="gallery-card" data-category="corporate">
             <div class="card-img-wrapper">
-              <img src="images/gallery_corporate.png" 
-                   alt="Sleek corporate arrangement with Ginger Lilies and Monsteras" 
-                   loading="lazy" 
-                   class="gallery-img"
-                   width="400" height="400">
+              <!-- Corporate: set src to your image path -->
+              <img src="Assets/images/TABLE.jpg" alt="Sleek corporate lobby arrangement with Ginger Lilies and Monsteras" loading="lazy"
+                class="gallery-img" width="400" height="400">
               <div class="card-overlay">
                 <span class="card-category">Corporate</span>
-                <h3 class="card-title">Nakasero Monolith</h3>
+                <h3 class="card-title">Lobby Arrangement</h3>
                 <p class="card-price">UGX 280,000</p>
-                <button class="btn-card-view" data-title="Nakasero Monolith" data-desc="An architectural, tall installation designed for corporate reception lobbies and executive boardrooms, displaying tall ginger lily stalks, pristine white calla lilies, and structural Monstera leaves in a metallic cylinder." data-img="images/gallery_corporate.png" data-price="UGX 280,000">View Details</button>
+                <button class="btn-card-view" data-title="Lobby Arrangement"
+                  data-desc="An architectural, tall installation designed for corporate reception lobbies and executive boardrooms, displaying tall ginger lily stalks, pristine white calla lilies, and structural Monstera leaves in a metallic cylinder."
+                  data-img="Assets/images/TABLE.jpg" data-price="UGX 280,000">View Details</button>
               </div>
             </div>
           </div>
 
+          <!-- Card 8: Corporate -->
+          <div class="gallery-card" data-category="corporate">
+            <div class="card-img-wrapper">
+              <!-- Corporate: set src to your image path -->
+              <img src="Assets/images/TABLE2.jpg" alt="Low-line boardroom arrangement with orchids" loading="lazy" class="gallery-img"
+                width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Corporate</span>
+                <h3 class="card-title">Boardroom Arrangement</h3>
+                <p class="card-price">UGX 320,000</p>
+                <button class="btn-card-view" data-title="Boardroom Arrangement"
+                  data-desc="A sleek, low-line arrangement in a brushed steel tray, alternating white dendrobium orchids, anthuriums, and river grass. Styled not to block sightlines across the conference table."
+                  data-img="Assets/images/TABLE2.jpg" data-price="UGX 320,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Corporate -->
+          <div class="gallery-card" data-category="corporate">
+            <div class="card-img-wrapper">
+              <!-- Corporate: set src to your image path -->
+              <img src="Assets/images/BOARD.jpg" alt="Office desk centerpiece in a concrete vase" loading="lazy" class="gallery-img"
+                width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Corporate</span>
+                <h3 class="card-title">Office Centerpiece</h3>
+                <p class="card-price">UGX 240,000</p>
+                <button class="btn-card-view" data-title="Office Centerpiece"
+                  data-desc="A circular, low-profile centerpiece in a concrete vessel, filled with seasonal tropicals, sculptural monstera, and gold-leafed palm fronds for a polished hotel or office reception desk."
+                  data-img="Assets/images/BOARD.jpg" data-price="UGX 240,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10: Sympathy & Memorial -->
+          <div class="gallery-card" data-category="sympathy-memorial">
+            <div class="card-img-wrapper">
+              <!-- Sympathy & Memorial: set src to your image path -->
+              <img src="" alt="Sympathy bouquet of deep red roses" loading="lazy" class="gallery-img" width="400"
+                height="400">
+              <div class="card-overlay">
+                <span class="card-category">Sympathy &amp; Memorial</span>
+                <h3 class="card-title">Sympathy Bouquet</h3>
+                <p class="card-price">UGX 220,000</p>
+                <button class="btn-card-view" data-title="Sympathy Bouquet"
+                  data-desc="A timeless collection of deep red roses sourced from volcanic-soil farms, accented by delicate baby's breath and fresh green eucalyptus, styled inside a dark minimalist glass jar."
+                  data-img="" data-price="UGX 220,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 11: Sympathy & Memorial -->
+          <div class="gallery-card" data-category="sympathy-memorial">
+            <div class="card-img-wrapper">
+              <!-- Sympathy & Memorial: set src to your image path -->
+              <img src="" alt="White lily memorial wreath" loading="lazy" class="gallery-img" width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Sympathy &amp; Memorial</span>
+                <h3 class="card-title">Memorial Wreath</h3>
+                <p class="card-price">UGX 260,000</p>
+                <button class="btn-card-view" data-title="Memorial Wreath"
+                  data-desc="A classic memorial wreath formed from white calla lilies, soft roses, and silver foliage, crafted on a natural vine frame as a dignified tribute of remembrance and peace."
+                  data-img="" data-price="UGX 260,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 12: Sympathy & Memorial -->
+          <div class="gallery-card" data-category="sympathy-memorial">
+            <div class="card-img-wrapper">
+              <!-- Sympathy & Memorial: set src to your image path -->
+              <img src="" alt="Tall standing sympathy spray with white blooms" loading="lazy" class="gallery-img"
+                width="400" height="400">
+              <div class="card-overlay">
+                <span class="card-category">Sympathy &amp; Memorial</span>
+                <h3 class="card-title">Standing Spray</h3>
+                <p class="card-price">UGX 300,000</p>
+                <button class="btn-card-view" data-title="Standing Spray"
+                  data-desc="A tall, elegant standing spray of white gladioli, chrysanthemums, and lush greens on an easel stand. A serene, compassionate expression of sympathy for funeral services."
+                  data-img="" data-price="UGX 300,000">View Details</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- View Full Gallery CTA -->
+        <div class="gallery-cta">
+          <a href="gallery.html" class="btn-primary" id="view-full-gallery-btn">
+            View Full Gallery
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;vertical-align:middle;">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section scroll-reveal">
+      <div class="section-container">
+        <div class="text-center">
+          <span class="section-label">FAQs</span>
+          <h2 class="section-title">Most Frequently Asked Questions:</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon"><i class="fa-solid fa-circle-question"></i></span>
+              <h3>Do you do deliveries?</h3>
+            </div>
+            <p class="faq-answer">Yes! Same-day flower delivery across Kampala.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon"><i class="fa-solid fa-circle-question"></i></span>
+              <h3>How much is a small bouquet?</h3>
+            </div>
+            <p class="faq-answer">Affordable options available daily - DM us for today's price list.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon"><i class="fa-solid fa-circle-question"></i></span>
+              <h3>Do you have MoMo?</h3>
+            </div>
+            <p class="faq-answer">Yes, we accept MTN MoMo &amp; Airtel Money.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon"><i class="fa-solid fa-circle-question"></i></span>
+              <h3>Do you have proof you exist / previous work?</h3>
+            </div>
+            <p class="faq-answer">Absolutely - we share portfolio photos/videos and client references for corporate
+              &amp; wedding clients.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-icon"><i class="fa-solid fa-circle-question"></i></span>
+              <h3>Cost for funeral wreaths / wedding for 200 guests?</h3>
+            </div>
+            <p class="faq-answer">We give quick quotes - send us the guest count / wreath style and we reply in minutes.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -235,77 +427,67 @@
           <div class="contact-info">
             <span class="section-label">Visit & Order</span>
             <h2 class="section-title">Let us Bloom your Space</h2>
-            <p>Our boutique workshop is located in Kampala, serving clients across Central Uganda. Stop by or reach out for custom orders, events, and monthly subscriptions.</p>
-            
+            <br>
+
             <div class="contact-details">
               <div class="detail-item">
-                <span class="detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
+                <a href="https://www.google.com/maps?cid=4811511260344091037&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&amp;hl=en&amp;gl=UG&amp;source=embed"
+                  target="_blank" rel="noopener" class="detail-icon icon-red" aria-label="View Sanyuka Flower Shop on Google Maps">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
                   </svg>
-                </span>
+                </a>
                 <div>
                   <h4>Location</h4>
-                  <p>Italian Supermarket, Tank Hill Road, Muyenga, Kampala, Uganda</p>
+                  <p><a href="https://www.google.com/maps?cid=4811511260344091037&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&amp;hl=en&amp;gl=UG&amp;source=embed"
+                      target="_blank" rel="noopener"
+                      style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Italian Supermarket,
+                      Tank Hill Road, Muyenga, Kampala, Uganda</a></p>
                 </div>
               </div>
               <div class="detail-item">
-                <span class="detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <a href="tel:0704659478" class="detail-icon icon-blue" aria-label="Call Sanyuka Flower Shop">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
                   </svg>
-                </span>
+                </a>
                 <div>
                   <h4>Calls</h4>
                   <p><a href="tel:0704659478">0704659478</a> / <a href="tel:0785066222">0785066222</a></p>
                 </div>
               </div>
               <div class="detail-item">
-                <span class="detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                <a href="https://wa.me/256714008799" target="_blank" rel="noopener" class="detail-icon icon-whatsapp" aria-label="Chat with Sanyuka Flower Shop on WhatsApp">
+                  <!-- Official WhatsApp brand icon -->
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
-                </span>
+                </a>
                 <div>
                   <h4>WhatsApp</h4>
                   <p><a href="https://wa.me/256714008799" target="_blank" rel="noopener">0714008799</a></p>
                 </div>
               </div>
-              <div class="detail-item">
-                <span class="detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="1" y="3" width="15" height="13"/>
-                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                    <circle cx="5.5" cy="18.5" r="2.5"/>
-                    <circle cx="18.5" cy="18.5" r="2.5"/>
-                  </svg>
-                </span>
+              <div class="detail-item delivery-item">
+                <a href="https://wa.me/256714008799" target="_blank" rel="noopener" class="detail-icon icon-yellow" aria-label="Same-day flower delivery across Kampala">
+                  <i class="fa-solid fa-motorcycle"></i>
+                </a>
                 <div>
-                  <h4>Delivery Areas</h4>
-                  <p>Kampala (Kololo, Nakasero, Muyenga, Bugolobi, Luzira), Entebbe, & Jinja</p>
+                  <h4 class="delivery-note">Same day delivery across Kampala!</h4>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="contact-form-wrapper">
-            <h3>Send a Message</h3>
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="c-name">Full Name</label>
-                <input type="text" id="c-name" name="name" required placeholder="Aria Namubiru">
-              </div>
-              <div class="form-group">
-                <label for="c-email">Email Address</label>
-                <input type="email" id="c-email" name="email" required placeholder="aria@domain.ug">
-              </div>
-              <div class="form-group">
-                <label for="c-msg">Your Request</label>
-                <textarea id="c-msg" name="message" rows="4" required placeholder="Tell us about your floral needs..."></textarea>
-              </div>
-              <button type="submit" class="btn-primary w-full">Send Message</button>
-            </form>
+
+          <div class="contact-map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.763641492464!2d32.60240958005576!3d0.29996546329182927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbdb0c9d735f3%3A0x42c5ebffb19a019d!2sSanyuka%20Flower%20Shop!5e0!3m2!1sen!2sug!4v1787045560245!5m2!1sen!2sug"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin" title="Sanyuka Flower Shop Location">
+            </iframe>
           </div>
         </div>
       </div>
@@ -317,17 +499,18 @@
     <div class="footer-container">
       <div class="footer-brand">
         <a href="#" class="logo footer-logo">
-          <img src="images/sanyuka_logo.png" alt="Sanyuka Decor Florists Logo" class="logo-img">
+          <img src="Assets/images/sanyuka_logo.png" alt="Sanyuka Decor Florists Logo" class="logo-img">
         </a>
         <p class="footer-tagline">Exquisite Ugandan Florals. Crafted with passion, delivered with care.</p>
       </div>
-      
+
       <div class="footer-links">
         <h4>Explore</h4>
-        <a href="#about">Story</a>
-        <a href="#specialties">Flora</a>
+        <a href="#about">Our Story</a>
+        <a href="#specialties">Specialties</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Get in Touch</a>
       </div>
 
       <div class="footer-socials">
@@ -335,28 +518,34 @@
         <p>Follow our daily creations and floral journeys across Uganda.</p>
         <div class="social-buttons">
           <!-- Instagram -->
-          <a href="https://www.instagram.com/sanyukadecorfloristsug/" class="social-btn instagram" aria-label="Follow Sanyuka Decor Florists on Instagram" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/sanyukadecorfloristsug/" class="social-btn instagram"
+            aria-label="Follow Sanyuka Decor Florists on Instagram" target="_blank" rel="noopener">
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
             </svg>
           </a>
           <!-- WhatsApp -->
-          <a href="https://wa.me/256714008799" class="social-btn whatsapp" aria-label="Chat with Sanyuka Decor Florists on WhatsApp" target="_blank" rel="noopener">
+          <a href="https://wa.me/256714008799" class="social-btn whatsapp"
+            aria-label="Chat with Sanyuka Decor Florists on WhatsApp" target="_blank" rel="noopener">
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
           </a>
           <!-- TikTok -->
-          <a href="https://www.tiktok.com/@sanyuka.decor.floristsug" class="social-btn tiktok" aria-label="Follow Sanyuka Decor Florists on TikTok" target="_blank" rel="noopener">
+          <a href="https://www.tiktok.com/@sanyuka.decor.floristsug" class="social-btn tiktok"
+            aria-label="Follow Sanyuka Decor Florists on TikTok" target="_blank" rel="noopener">
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.38a8.16 8.16 0 004.76 1.52V7.45a4.85 4.85 0 01-1-.76z"/>
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.38a8.16 8.16 0 004.76 1.52V7.45a4.85 4.85 0 01-1-.76z" />
             </svg>
           </a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Sanyuka Decor Florists. All Rights Reserved. Sourced & Handcrafted in Uganda.</p>
+      <p>&copy; 2026 Sanyuka Decor Florists. All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -381,50 +570,37 @@
     </div>
   </dialog>
 
-  <!-- Custom Request Popover Dialog (Top Layer Transition) -->
+  <!-- Custom Order Popover Dialog (Top Layer Transition) -->
   <dialog id="custom-request-dialog" class="glass-dialog">
     <div class="dialog-body custom-request-body">
-      <button class="dialog-close-btn" id="close-custom-btn" aria-label="Close custom request dialog">&times;</button>
-      <h3>Request a Bespoke Arrangement</h3>
-      <p class="dialog-subtitle">Tell us what you're imagining, and our Sanyuka artisans will design it.</p>
-      
+      <button class="dialog-close-btn" id="close-custom-btn" aria-label="Close order dialog">&times;</button>
+      <h3>Place Your Order</h3>
+      <p class="dialog-subtitle">Tell us how you'd like to receive it, and we'll confirm on WhatsApp.</p>
+
       <form id="custom-request-form">
-        <div class="form-grid-2">
-          <div class="form-group">
-            <label for="cr-name">Your Name</label>
-            <input type="text" id="cr-name" required placeholder="Aria Namubiru">
-          </div>
-          <div class="form-group">
-            <label for="cr-phone">Phone / WhatsApp</label>
-            <input type="tel" id="cr-phone" required placeholder="+256 714 008 799">
-          </div>
+        <div class="form-group">
+          <label for="cr-name">Your Name</label>
+          <input type="text" id="cr-name" required placeholder="Aria Namubiru">
         </div>
-        <div class="form-grid-2">
-          <div class="form-group">
-            <label for="cr-occasion">Occasion</label>
-            <select id="cr-occasion">
-              <option value="wedding">Wedding / Bridal</option>
-              <option value="romance">Romance / Anniversary</option>
-              <option value="corporate">Corporate / Office Space</option>
-              <option value="custom">Other Special Custom Request</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="cr-delivery">Delivery Area</label>
-            <select id="cr-delivery">
-              <option value="nakasero">Nakasero / Kololo / Bugolobi</option>
-              <option value="muyenga">Muyenga / Kabalagala</option>
-              <option value="other-kla">Other Kampala Areas</option>
-              <option value="entebbe">Entebbe</option>
-              <option value="jinja">Jinja</option>
-            </select>
+        <div class="form-group">
+          <span class="form-label">Delivery or Pickup</span>
+          <div class="fulfillment-options">
+            <label class="option-pill">
+              <input type="radio" name="cr-fulfillment" value="Delivery" checked>
+              <span>Delivery</span>
+            </label>
+            <label class="option-pill">
+              <input type="radio" name="cr-fulfillment" value="Pickup">
+              <span>Pickup</span>
+            </label>
           </div>
         </div>
         <div class="form-group">
-          <label for="cr-desc">Floral Preferences & Budget (UGX)</label>
-          <textarea id="cr-desc" rows="3" required placeholder="E.g., I'd love red volcanic roses with Bird of Paradise stems, budget around 200,000 UGX..."></textarea>
+          <label for="cr-desc">Notes</label>
+          <textarea id="cr-desc" rows="4"
+            placeholder="Add any details you'd like us to know..."></textarea>
         </div>
-        <button type="submit" class="btn-primary w-full">Submit Custom Inquiry</button>
+        <button type="submit" class="btn-primary w-full">Send Order via WhatsApp</button>
       </form>
     </div>
   </dialog>
@@ -435,4 +611,5 @@
   <!-- JavaScript Interaction Script -->
   <script src="app.js"></script>
 </body>
+
 </html>

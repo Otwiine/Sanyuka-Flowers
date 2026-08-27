@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Browse the full Sanyuka Decor Florists gallery — weddings, corporate, special occasions and sympathy & memorial arrangements, all handcrafted in Uganda.">
+  <title>Full Gallery | Sanyuka Decor Florists</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Gallery-page-specific overrides */
+
+    .gallery-page-hero {
+      background:
+        linear-gradient(rgba(20, 30, 25, 0.45), rgba(20, 30, 25, 0.45)),
+        url('Assets/images/PINKandPURP.jpg') center/cover no-repeat;
+      padding: 140px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(212, 106, 67, 0.18) 0%, transparent 70%);
+    }
+
+    .gallery-page-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--color-cream);
+      margin: 12px 0 16px;
+      line-height: 1.15;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gallery-page-hero p {
+      color: rgba(251, 248, 243, 0.85);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Sticky filter bar */
+    .gallery-filter-bar {
+      background: rgba(250, 245, 238, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-gray-light);
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      padding: 0 24px;
+    }
+
+    .gallery-filter-bar .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 14px 0;
+    }
+
+    /* Full gallery grid */
+    .full-gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Let each card's height follow its image wrapper so the overlay
+       text is never clipped and no empty space appears below the image */
+    .full-gallery-grid .gallery-card {
+      aspect-ratio: auto;
+    }
+
+    .full-gallery-grid .gallery-card .card-img-wrapper {
+      aspect-ratio: 4 / 3;
+      height: auto;
+    }
+
+    .full-gallery-grid .gallery-card .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="glass-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="Assets/images/sanyuka_logo.png" alt="Sanyuka Decor Florists Logo" class="logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#about">Our Story</a>
+        <a href="index.html#specialties">Specialties</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="index.html#faq">FAQs</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero Banner -->
+    <section class="gallery-page-hero">
+      <h1>Our Full Collection</h1>
+      <p>Every arrangement tells a story. Browse our complete portfolio of handcrafted Ugandan floral artistry.</p>
+    </section>
+
+    <!-- Sticky Filter Bar -->
+    <div class="gallery-filter-bar">
+      <div class="filter-inner">
+        <button class="filter-btn active" data-filter="wedding">Weddings</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="special-occasions">Special Occasions</button>
+        <button class="filter-btn" data-filter="sympathy-memorial">Sympathy &amp; Memorial</button>
+      </div>
+    </div>
+
+    <!-- Full Gallery Grid -->
+    <div class="full-gallery-grid" id="gallery-grid">
+
+      <!-- WEDDINGS -->
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 1: set src to your image path -->
+          <img src="" alt="Bridal bouquet" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Bridal Bouquet</h3>
+            <p class="card-price">UGX 350,000</p>
+            <button class="btn-card-view" data-title="Bridal Bouquet"
+              data-desc="A hand-tied bridal bouquet with fresh seasonal blooms, crafted to complement your wedding palette."
+              data-img="" data-price="UGX 350,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 2: set src to your image path -->
+          <img src="" alt="Reception centrepiece" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Reception Centerpiece</h3>
+            <p class="card-price">UGX 480,000</p>
+            <button class="btn-card-view" data-title="Reception Centerpiece"
+              data-desc="A lush table centrepiece that anchors your reception tables and ties the whole venue together."
+              data-img="" data-price="UGX 480,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 3: set src to your image path -->
+          <img src="" alt="Aisle arrangement" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Aisle Arrangement</h3>
+            <p class="card-price">UGX 550,000</p>
+            <button class="btn-card-view" data-title="Aisle Arrangement"
+              data-desc="Elegant floral arrangements to line the aisle and frame your walk down to forever."
+              data-img="" data-price="UGX 550,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 4: set src to your image path -->
+          <img src="" alt="Ceremony arch" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Ceremony Arch</h3>
+            <p class="card-price">UGX 1,200,000</p>
+            <button class="btn-card-view" data-title="Ceremony Arch"
+              data-desc="A full floral arch installation, hand-woven with blooms and greenery for a breathtaking backdrop."
+              data-img="" data-price="UGX 1,200,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 5: set src to your image path -->
+          <img src="" alt="Bridesmaids posies" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Bridesmaids Posies</h3>
+            <p class="card-price">UGX 250,000</p>
+            <button class="btn-card-view" data-title="Bridesmaids Posies"
+              data-desc="Matching hand-tied posies for your bridal party, echoing the bridal bouquet's design."
+              data-img="" data-price="UGX 250,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 6: set src to your image path -->
+          <img src="" alt="Head table runner" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Head Table Runner</h3>
+            <p class="card-price">UGX 900,000</p>
+            <button class="btn-card-view" data-title="Head Table Runner"
+              data-desc="A sweeping floral runner for the head table, creating a dramatic focal point for the newlyweds."
+              data-img="" data-price="UGX 900,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 7: set src to your image path -->
+          <img src="" alt="Groomsmen boutonnieres" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Groomsmen Boutonnieres</h3>
+            <p class="card-price">UGX 120,000</p>
+            <button class="btn-card-view" data-title="Groomsmen Boutonnieres"
+              data-desc="Small, polished buttonhole florals that complete the groom's party look."
+              data-img="" data-price="UGX 120,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 8: set src to your image path -->
+          <img src="" alt="Cake table styling" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Cake Table Styling</h3>
+            <p class="card-price">UGX 420,000</p>
+            <button class="btn-card-view" data-title="Cake Table Styling"
+              data-desc="Soft floral accents and greenery to frame your wedding cake beautifully."
+              data-img="" data-price="UGX 420,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="wedding">
+        <div class="card-img-wrapper">
+          <!-- Wedding 9: set src to your image path -->
+          <img src="" alt="Gift table florals" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Weddings</span>
+            <h3 class="card-title">Gift Table Florals</h3>
+            <p class="card-price">UGX 380,000</p>
+            <button class="btn-card-view" data-title="Gift Table Florals"
+              data-desc="A welcoming arrangement for the gift table, styled to match your wedding theme."
+              data-img="" data-price="UGX 380,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CORPORATE -->
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 1: set src to your image path -->
+          <img src="" alt="Lobby arrangement" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Lobby Arrangement</h3>
+            <p class="card-price">UGX 280,000</p>
+            <button class="btn-card-view" data-title="Lobby Arrangement"
+              data-desc="A striking installation for reception lobbies that makes a confident first impression."
+              data-img="" data-price="UGX 280,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 2: set src to your image path -->
+          <img src="" alt="Boardroom arrangement" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Boardroom Arrangement</h3>
+            <p class="card-price">UGX 320,000</p>
+            <button class="btn-card-view" data-title="Boardroom Arrangement"
+              data-desc="A refined centrepiece for boardroom tables, balancing presence with professionalism."
+              data-img="" data-price="UGX 320,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 3: set src to your image path -->
+          <img src="" alt="Office centrepiece" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Office Centerpiece</h3>
+            <p class="card-price">UGX 145,000</p>
+            <button class="btn-card-view" data-title="Office Centerpiece"
+              data-desc="A compact, low-maintenance arrangement that brightens any workspace."
+              data-img="" data-price="UGX 145,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 4: set src to your image path -->
+          <img src="" alt="Reception desk set" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Reception Desk Set</h3>
+            <p class="card-price">UGX 180,000</p>
+            <button class="btn-card-view" data-title="Reception Desk Set"
+              data-desc="Elegant desk-side florals that welcome clients the moment they arrive."
+              data-img="" data-price="UGX 180,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 5: set src to your image path -->
+          <img src="" alt="Executive gift bouquet" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Executive Gift Bouquet</h3>
+            <p class="card-price">UGX 200,000</p>
+            <button class="btn-card-view" data-title="Executive Gift Bouquet"
+              data-desc="Sophisticated florals designed to elevate business relationships and client gestures."
+              data-img="" data-price="UGX 200,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 6: set src to your image path -->
+          <img src="" alt="Event stage florals" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Event Stage Florals</h3>
+            <p class="card-price">UGX 750,000</p>
+            <button class="btn-card-view" data-title="Event Stage Florals"
+              data-desc="Statement arrangements that dress a stage for launches, awards and conferences."
+              data-img="" data-price="UGX 750,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 7: set src to your image path -->
+          <img src="" alt="Window display styling" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Window Display Styling</h3>
+            <p class="card-price">UGX 240,000</p>
+            <button class="btn-card-view" data-title="Window Display Styling"
+              data-desc="Curated floral window displays that draw the eye and reinforce your brand."
+              data-img="" data-price="UGX 240,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 8: set src to your image path -->
+          <img src="" alt="Corporate event table" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Corporate Event Table</h3>
+            <p class="card-price">UGX 520,000</p>
+            <button class="btn-card-view" data-title="Corporate Event Table"
+              data-desc="Full table styling for corporate dinners, galas and client functions."
+              data-img="" data-price="UGX 520,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="corporate">
+        <div class="card-img-wrapper">
+          <!-- Corporate 9: set src to your image path -->
+          <img src="" alt="Client welcome vase" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Corporate</span>
+            <h3 class="card-title">Client Welcome Vase</h3>
+            <p class="card-price">UGX 160,000</p>
+            <button class="btn-card-view" data-title="Client Welcome Vase"
+              data-desc="A warm welcome arrangement for meeting rooms and client suites."
+              data-img="" data-price="UGX 160,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPECIAL OCCASIONS -->
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 1: set src to your image path -->
+          <img src="" alt="Birthday bouquet" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Birthday</h3>
+            <p class="card-price">UGX 150,000</p>
+            <button class="btn-card-view" data-title="Birthday"
+              data-desc="Vibrant blooms to make a birthday feel extra special."
+              data-img="" data-price="UGX 150,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 2: set src to your image path -->
+          <img src="" alt="Anniversary bouquet" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Anniversary</h3>
+            <p class="card-price">UGX 220,000</p>
+            <button class="btn-card-view" data-title="Anniversary"
+              data-desc="Romantic arrangements designed to mark another beautiful year together."
+              data-img="" data-price="UGX 220,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 3: set src to your image path -->
+          <img src="" alt="Graduation arrangement" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Graduation</h3>
+            <p class="card-price">UGX 190,000</p>
+            <button class="btn-card-view" data-title="Graduation"
+              data-desc="Bold, celebratory florals to congratulate the graduate in style."
+              data-img="" data-price="UGX 190,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 4: set src to your image path -->
+          <img src="" alt="Valentine surprise" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Valentine Surprise</h3>
+            <p class="card-price">UGX 250,000</p>
+            <button class="btn-card-view" data-title="Valentine Surprise"
+              data-desc="Classic roses and soft accents for the most romantic day of the year."
+              data-img="" data-price="UGX 250,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 5: set src to your image path -->
+          <img src="" alt="Mothers day bouquet" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Mother's Day Bouquet</h3>
+            <p class="card-price">UGX 180,000</p>
+            <button class="btn-card-view" data-title="Mother's Day Bouquet"
+              data-desc="Warm, heartfelt blooms to thank the mums who do it all."
+              data-img="" data-price="UGX 180,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 6: set src to your image path -->
+          <img src="" alt="New baby basket" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">New Baby Basket</h3>
+            <p class="card-price">UGX 210,000</p>
+            <button class="btn-card-view" data-title="New Baby Basket"
+              data-desc="A sweet arrangement to welcome a new little one into the world."
+              data-img="" data-price="UGX 210,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 7: set src to your image path -->
+          <img src="" alt="Get well soon arrangement" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Get Well Soon</h3>
+            <p class="card-price">UGX 140,000</p>
+            <button class="btn-card-view" data-title="Get Well Soon"
+              data-desc="Cheerful blooms to lift someone's spirits while they recover."
+              data-img="" data-price="UGX 140,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 8: set src to your image path -->
+          <img src="" alt="Congratulations spray" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Congratulations Spray</h3>
+            <p class="card-price">UGX 260,000</p>
+            <button class="btn-card-view" data-title="Congratulations Spray"
+              data-desc="A celebratory spray for promotions, achievements and big wins."
+              data-img="" data-price="UGX 260,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="special-occasions">
+        <div class="card-img-wrapper">
+          <!-- Special Occasion 9: set src to your image path -->
+          <img src="" alt="Party table florals" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Special Occasions</span>
+            <h3 class="card-title">Party Table Florals</h3>
+            <p class="card-price">UGX 300,000</p>
+            <button class="btn-card-view" data-title="Party Table Florals"
+              data-desc="Playful, colourful accents to bring any celebration to life."
+              data-img="" data-price="UGX 300,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SYMPATHY & MEMORIAL -->
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 1: set src to your image path -->
+          <img src="" alt="Sympathy bouquet" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Sympathy Bouquet</h3>
+            <p class="card-price">UGX 200,000</p>
+            <button class="btn-card-view" data-title="Sympathy Bouquet"
+              data-desc="A gentle bouquet crafted with dignity to express your deepest sympathy."
+              data-img="" data-price="UGX 200,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 2: set src to your image path -->
+          <img src="" alt="Memorial wreath" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Memorial Wreath</h3>
+            <p class="card-price">UGX 350,000</p>
+            <button class="btn-card-view" data-title="Memorial Wreath"
+              data-desc="A timeless wreath honouring a loved one with grace and compassion."
+              data-img="" data-price="UGX 350,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 3: set src to your image path -->
+          <img src="" alt="Standing spray" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Standing Spray</h3>
+            <p class="card-price">UGX 450,000</p>
+            <button class="btn-card-view" data-title="Standing Spray"
+              data-desc="A dignified standing tribute for display at the service."
+              data-img="" data-price="UGX 450,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 4: set src to your image path -->
+          <img src="" alt="Casket drape" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Casket Drape</h3>
+            <p class="card-price">UGX 600,000</p>
+            <button class="btn-card-view" data-title="Casket Drape"
+              data-desc="A tasteful floral drape arranged with care and respect."
+              data-img="" data-price="UGX 600,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 5: set src to your image path -->
+          <img src="" alt="Funeral cross" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Funeral Cross</h3>
+            <p class="card-price">UGX 320,000</p>
+            <button class="btn-card-view" data-title="Funeral Cross"
+              data-desc="A solemn floral cross, beautifully crafted in remembrance."
+              data-img="" data-price="UGX 320,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 6: set src to your image path -->
+          <img src="" alt="Rose tribute" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Rose Tribute</h3>
+            <p class="card-price">UGX 250,000</p>
+            <button class="btn-card-view" data-title="Rose Tribute"
+              data-desc="Soft rose arrangements conveying love and farewell."
+              data-img="" data-price="UGX 250,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 7: set src to your image path -->
+          <img src="" alt="Lily condolence piece" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Lily Condolence Piece</h3>
+            <p class="card-price">UGX 280,000</p>
+            <button class="btn-card-view" data-title="Lily Condolence Piece"
+              data-desc="Graceful lilies arranged to offer comfort and peace."
+              data-img="" data-price="UGX 280,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 8: set src to your image path -->
+          <img src="" alt="White orchid tribute" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">White Orchid Tribute</h3>
+            <p class="card-price">UGX 380,000</p>
+            <button class="btn-card-view" data-title="White Orchid Tribute"
+              data-desc="Pure white orchids as an elegant, lasting mark of respect."
+              data-img="" data-price="UGX 380,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="sympathy-memorial">
+        <div class="card-img-wrapper">
+          <!-- Sympathy 9: set src to your image path -->
+          <img src="" alt="Flower spray stand" loading="lazy" class="gallery-img" width="400" height="400">
+          <div class="card-overlay">
+            <span class="card-category">Sympathy &amp; Memorial</span>
+            <h3 class="card-title">Flower Spray Stand</h3>
+            <p class="card-price">UGX 270,000</p>
+            <button class="btn-card-view" data-title="Flower Spray Stand"
+              data-desc="A complete spray stand arrangement for graveside services."
+              data-img="" data-price="UGX 270,000">View Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <img src="Assets/images/sanyuka_logo.png" alt="Sanyuka Decor Florists Logo" class="logo-img">
+        </a>
+        <p class="footer-tagline">Exquisite Ugandan Florals. Crafted with passion, delivered with care.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="index.html#about">Our Story</a>
+        <a href="index.html#specialties">Specialties</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#faq">FAQs</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <div class="footer-socials">
+        <h4>Join our Bloom Family</h4>
+        <p>Follow our daily creations and floral journeys across Uganda.</p>
+        <div class="social-buttons">
+          <a href="https://www.instagram.com/sanyukadecorfloristsug/" class="social-btn instagram"
+            aria-label="Follow Sanyuka Decor Florists on Instagram" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/256714008799" class="social-btn whatsapp"
+            aria-label="Chat with Sanyuka Decor Florists on WhatsApp" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@sanyuka.decor.floristsug" class="social-btn tiktok"
+            aria-label="Follow Sanyuka Decor Florists on TikTok" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.38a8.16 8.16 0 004.76 1.52V7.45a4.85 4.85 0 01-1-.76z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sanyuka Decor Florists. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Dialog -->
+  <dialog id="lightbox-dialog" class="glass-dialog">
+    <div class="dialog-body">
+      <button class="dialog-close-btn" id="close-lightbox-btn" aria-label="Close details dialog">&times;</button>
+      <div class="dialog-grid">
+        <div class="dialog-img-wrapper">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img-content">
+        </div>
+        <div class="dialog-info-wrapper">
+          <span class="dialog-tag" id="lightbox-tag">Weddings</span>
+          <h3 id="lightbox-title" class="dialog-title">Signature Arrangement</h3>
+          <p id="lightbox-desc" class="dialog-desc">Details of the arrangement will go here.</p>
+          <div class="dialog-footer">
+            <span class="dialog-price" id="lightbox-price">UGX 0.00</span>
+            <button class="btn-primary" id="dialog-order-btn">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Custom Order Popover Dialog (Top Layer Transition) -->
+  <dialog id="custom-request-dialog" class="glass-dialog">
+    <div class="dialog-body custom-request-body">
+      <button class="dialog-close-btn" id="close-custom-btn" aria-label="Close order dialog">&times;</button>
+      <h3>Place Your Order</h3>
+      <p class="dialog-subtitle">Tell us how you'd like to receive it, and we'll confirm on WhatsApp.</p>
+
+      <form id="custom-request-form">
+        <div class="form-group">
+          <label for="cr-name">Your Name</label>
+          <input type="text" id="cr-name" required placeholder="Aria Namubiru">
+        </div>
+        <div class="form-group">
+          <span class="form-label">Delivery or Pickup</span>
+          <div class="fulfillment-options">
+            <label class="option-pill">
+              <input type="radio" name="cr-fulfillment" value="Delivery" checked>
+              <span>Delivery</span>
+            </label>
+            <label class="option-pill">
+              <input type="radio" name="cr-fulfillment" value="Pickup">
+              <span>Pickup</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cr-desc">Notes</label>
+          <textarea id="cr-desc" rows="4"
+            placeholder="Add any details you'd like us to know..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full">Send Order via WhatsApp</button>
+      </form>
+    </div>
+  </dialog>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script>
+    // Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.gallery-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        cards.forEach(card => {
+          const match = card.dataset.category === f;
+          if (match) {
+            card.style.display = 'block';
+            requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; });
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => { if (card.style.opacity === '0') card.style.display = 'none'; }, 300);
+          }
+        });
+      });
+    });
+
+    // Show only the default tab (Weddings) on load
+    filterBtns[0].click();
+
+    // Lightbox
+    const dialog   = document.getElementById('lightbox-dialog');
+    const closeBtn = document.getElementById('close-lightbox-btn');
+    const lbImg    = document.getElementById('lightbox-img');
+    const lbTag    = document.getElementById('lightbox-tag');
+    const lbTitle  = document.getElementById('lightbox-title');
+    const lbDesc   = document.getElementById('lightbox-desc');
+    const lbPrice  = document.getElementById('lightbox-price');
+    const orderBtn = document.getElementById('dialog-order-btn');
+
+    document.querySelectorAll('.btn-card-view').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        lbImg.src = btn.dataset.img; lbImg.alt = btn.dataset.title;
+        lbTag.textContent   = btn.parentElement.querySelector('.card-category').innerText;
+        lbTitle.textContent = btn.dataset.title;
+        lbDesc.textContent  = btn.dataset.desc;
+        lbPrice.textContent = btn.dataset.price;
+        dialog.showModal();
+      });
+    });
+    closeBtn.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', e => {
+      const r = dialog.getBoundingClientRect();
+      if (!(r.top <= e.clientY && e.clientY <= r.bottom && r.left <= e.clientX && e.clientX <= r.right)) dialog.close();
+    });
+
+    // Custom request
+    const customDialog   = document.getElementById('custom-request-dialog');
+    const closeCustomBtn = document.getElementById('close-custom-btn');
+    closeCustomBtn.addEventListener('click', () => customDialog.close());
+    customDialog.addEventListener('click', e => {
+      const r = customDialog.getBoundingClientRect();
+      if (!(r.top <= e.clientY && e.clientY <= r.bottom && r.left <= e.clientX && e.clientX <= r.right)) customDialog.close();
+    });
+    orderBtn.addEventListener('click', () => {
+      const title = lbTitle.textContent; dialog.close();
+      document.getElementById('cr-desc').value = 'I would like to order: "' + title + '".';
+      customDialog.showModal();
+    });
+    document.getElementById('custom-request-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('cr-name').value.trim();
+      const fulfillment = document.querySelector('input[name="cr-fulfillment"]:checked').value;
+      const notes = document.getElementById('cr-desc').value.trim();
+
+      const message = 'New Order Request\n\nName: ' + name + '\nFulfillment: ' + fulfillment + '\nNotes: ' + notes;
+      window.open('https://wa.me/256714008799?text=' + encodeURIComponent(message), '_blank');
+      customDialog.close();
+      showToast('Order sent to WhatsApp, ' + name + "! We'll confirm your " + fulfillment.toLowerCase() + ' shortly.');
+      e.target.reset();
+    });
+
+    function showToast(msg) {
+      const c = document.getElementById('toast-container');
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.innerHTML = '<span>' + msg + '</span><button style="background:none;border:none;color:inherit;font-size:1.2rem;cursor:pointer;margin-left:12px;" onclick="this.parentElement.remove()">&times;</button>';
+      c.appendChild(t);
+      setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateY(20px)'; setTimeout(() => t.remove(), 300); }, 5000);
+    }
+  </script>
+
+</body>
+</html>
