@@ -178,6 +178,26 @@ a {
   transform: translateY(-2px);
 }
 
+/* WhatsApp header CTA */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp i {
+  font-size: 1.2rem;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
 /* Header & Navigation */
 .glass-header {
   position: fixed;
@@ -312,6 +332,7 @@ a {
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -1474,6 +1495,8 @@ dialog[open]::backdrop {
 .gallery-cta {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-top: 48px;
 }
 

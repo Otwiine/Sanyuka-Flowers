@@ -142,15 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
      3. BESPOKE REQUEST DIALOG LOGIC
      ------------------------------------------------------------------------ */
   const customRequestDialog = document.getElementById('custom-request-dialog');
-  const openCustomBtn = document.getElementById('open-custom-btn');
   const closeCustomBtn = document.getElementById('close-custom-btn');
-
-  openCustomBtn.addEventListener('click', () => {
-    const gallerySection = document.getElementById('gallery');
-    if (gallerySection) {
-      gallerySection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
 
   closeCustomBtn.addEventListener('click', () => {
     customRequestDialog.close();
