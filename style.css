@@ -414,6 +414,39 @@ a {
   opacity: 0.85;
 }
 
+/* About slider (Why natural slide) */
+.about-slider {
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.about-track {
+  display: flex;
+  width: calc(200% + 80px);
+  column-gap: 80px;
+  transition: transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.about-track.is-slid {
+  transform: translateX(calc(-50% - 40px));
+}
+
+.about-slide {
+  flex: 0 0 calc((100% - 80px) / 2);
+}
+
+.about-slide2-title {
+  color: #000000;
+}
+
+.about-nav-btn {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+}
+
 @media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;

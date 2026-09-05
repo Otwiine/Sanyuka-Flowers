@@ -74,6 +74,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ------------------------------------------------------------------------
+     1b. ABOUT SECTION SLIDER (Why natural)
+     ------------------------------------------------------------------------ */
+  const aboutTrack = document.getElementById('about-track');
+  const whyNaturalBtn = document.getElementById('why-natural-btn');
+  const backOurStoryBtn = document.getElementById('back-our-story-btn');
+
+  if (aboutTrack && whyNaturalBtn) {
+    whyNaturalBtn.addEventListener('click', () => {
+      aboutTrack.classList.add('is-slid');
+    });
+  }
+
+  if (aboutTrack && backOurStoryBtn) {
+    backOurStoryBtn.addEventListener('click', () => {
+      aboutTrack.classList.remove('is-slid');
+    });
+  }
+
+  /* ------------------------------------------------------------------------
      2. LIGHTBOX DIALOG LOGIC
      ------------------------------------------------------------------------ */
   const lightboxDialog = document.getElementById('lightbox-dialog');
