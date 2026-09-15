@@ -270,9 +270,97 @@ a {
   opacity: 1;
 }
 
+/* Hamburger toggle - only rendered on small screens */
+.nav-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  /* Nav collapses into a dropdown drawer toggled by the hamburger */
+  .header-container {
+    gap: 10px;
+    padding: 8px 16px;
+  }
+
+  /* The 1.6x scale bleeds past its layout box and would cover the CTA */
+  .glass-header .logo-img {
+    transform: scale(1.25);
+  }
+
+  /* Keep the CTA on one line so it doesn't eat the whole header height */
+  .btn-whatsapp {
+    margin-left: auto;
+    gap: 8px;
+    font-size: 0.85rem;
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .nav-toggle-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--color-forest);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
   .nav-links {
-    display: none; /* In a real project we'd use a mobile hamburger drawer, but let's keep layout clean */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(var(--backdrop-blur));
+    -webkit-backdrop-filter: blur(var(--backdrop-blur));
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.4s;
+  }
+
+  .nav-links.is-open {
+    max-height: 70vh;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links a {
+    padding: 16px 24px;
+    font-size: 1rem;
+    border-top: 1px solid rgba(140, 164, 135, 0.12);
   }
 }
 
@@ -379,6 +467,46 @@ a {
   .hero-visual {
     max-width: 500px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero photo becomes the section background instead of a separate column */
+  .hero-section {
+    background-image:
+      linear-gradient(rgba(250, 245, 238, 0.55), rgba(250, 245, 238, 0.68)),
+      url('Assets/images/PINKandPURP.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .hero-visual {
+    display: none;
+  }
+  /* Stronger contrast for text sitting over the hero photo */
+  .hero-subtitle {
+    color: #000000;
+  }
+  .hero-description {
+    font-weight: 600;
+  }
+  .hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-actions .btn-primary {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  /* View Full Catalogue sits on its own centered row */
+  .hero-actions .btn-primary:last-child {
+    flex: 0 0 auto;
+    max-width: none;
   }
 }
 
@@ -519,16 +647,10 @@ a {
   .specialties-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
   .specialties-grid {
-    grid-template-columns: 1fr;
-  }
-  .gallery-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -577,11 +699,38 @@ a {
   box-shadow: 0 4px 14px rgba(13, 38, 30, 0.18);
 }
 
+@media (max-width: 768px) {
+  .filter-buttons {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+  .filter-btn {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   transition: opacity 0.3s ease;
+}
+
+/* Must stay after the base rule above, or these lose the cascade */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .gallery-card {
@@ -671,6 +820,19 @@ a {
 .btn-card-view:hover {
   background-color: var(--color-cream);
   color: var(--color-forest);
+}
+
+/* Centre the card text block in the middle of the tile (mobile) */
+@media (max-width: 768px) {
+  .card-overlay {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .card-price {
+    margin-bottom: 0;
+  }
 }
 
 /* FAQ Section */
